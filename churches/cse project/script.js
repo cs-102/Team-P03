@@ -36,14 +36,14 @@ function mine11(){
     
 }
 function mine12(){
-    window.location.href=''
+    window.location.href='https://www.google.com/maps/search/Restaurants/@15.4981311,73.8920338,14z/data=!3m1!4b1!4m22!1m13!4m12!1m4!2m2!1d73.9831808!2d15.4228462!4e1!1m6!1m2!1s0x3bbfbef33b63c2ef:0x4d80d5fbfc3d3947!2sOff+National+Highway+4,+Velha+Goa,+Goa+403402!2m2!1d73.911237!2d15.5030158!2m7!3m6!1sRestaurants!2sChurch+of+St.+Francis+of+Assisi!3s0x3bbfbef33b63c2ef:0x4d80d5fbfc3d3947!4m2!1d73.9113228!2d15.5029742?entry=ttu'
 }
 function mine13(){
-    window.location.href=''
+    window.location.href='https://www.google.com/maps/dir//Off+National+Highway+4,+Velha+Goa,+Goa+403402/@15.5031065,73.828808,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbfbef33b63c2ef:0x4d80d5fbfc3d3947!2m2!1d73.911237!2d15.5030158?entry=ttu'
 }
 function mine14(){
-    window.location.href=''
+    window.location.href='https://www.google.com/maps/search/Restaurants/@15.4635462,73.9055909,13z/data=!3m1!4b1!4m22!1m13!4m12!1m4!2m2!1d73.9831808!2d15.4228462!4e1!1m6!1m2!1s0x3bbfbef310fbc135:0x82266829954a5497!2sChapel+of+St.+Catherine+of+Alexandria,+Velha+Goa,+Goa!2m2!1d73.910435!2d15.503375!2m7!3m6!1sRestaurants!2sChapel+of+St.+Catherine+of+Alexandria!3s0x3bbfbef310fbc135:0x82266829954a5497!4m2!1d73.9103464!2d15.5038063?entry=ttu'
 }
 function mine15(){
-    window.location.href=''
+    window.location.href='https://www.google.com/maps/dir/15.4228462,73.9831808/Chapel+of+St.+Catherine+of+Alexandria,+Velha+Goa,+Goa/@15.4633884,73.905591,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bbfbef310fbc135:0x82266829954a5497!2m2!1d73.910435!2d15.503375?entry=ttu'
 }
