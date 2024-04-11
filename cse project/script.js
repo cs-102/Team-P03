@@ -37,10 +37,10 @@
                                             
                                         }
                                         function mine12(){
-                                            window.location.href=''
+                                            window.location.href="https://www.google.com/maps/search/Restaurants/@15.5677829,73.7893838,14z/data=!3m1!4b1!4m23!1m15!4m14!1m6!1m2!1s0x3bbe4f8a16e887f1:0x894249fead443527!2sButterfly+Beach,+Goa!2m2!1d74.001647!2d15.0196019!1m6!1m2!1s0x3bbfea8f6df32ca9:0x26da8bea2cea101e!2sGuirim,+Goa+403507!2m2!1d73.8034299!2d15.5614189!2m6!3m5!2sSt.+Diogo's+Church!3s0x3bbfea8f6df32ca9:0x26da8bea2cea101e!4m2!1d73.8036241!2d15.5616768?entry=ttu"
                                         }
                                         function mine13(){
-                                            window.location.href=''
+                                            window.location.href='https://www.google.com/maps/dir//Guirim,+Goa+403507/@15.5614036,73.7210281,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbfea8f6df32ca9:0x26da8bea2cea101e!2m2!1d73.8034299!2d15.5614189?entry=ttu'
                                         }
                                         function mine15(){
                                             window.location.href='https://www.google.com/maps/dir//GW36%2B953,+Velha+Goa,+Goa+403402/@15.5033597,73.8280332,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbfbef310fbc135:0x82266829954a5497!2m2!1d73.910435!2d15.503375?entry=ttu'
