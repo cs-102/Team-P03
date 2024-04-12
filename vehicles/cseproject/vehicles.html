@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+                document.GetElementByID('bikespan').style.height=document.getElementById('bike').style.getPropertyValue("height");
+
+        function carmove(){
+            document.getElementById("car").classList.replace("car","carmove");
+            document.getElementById("carspan").classList.replace("carspan","carspanmv");
+        }
+        function bikemove(){
+            document.getElementById("bike").classList.replace("bike","bikemove");
+            document.getElementById("bikespan").classList.replace("bikespan","bikespanmv");
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="ex.css">
@@ -22,15 +34,43 @@
         </ul>
     </nav>
     <h1 style="text-align: center; color: black;font-size: 55px;font-family: 'Bree Serif', serif;">Chose your preferred vehicle</h1>
-    <div class="vehsel" style="align-items: center;">
-        <span>
-            <a href="google.com">
-            <img src="https://www.muthootcap.com/wp-content/uploads/2023/09/yamaha-r15-v4-14-1.png" class="bike" >
-            </a>
-        </span>
-        <span style="margin-left: 40%;">
-            <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Highlights/Grandi10niosnew/niosmodelpc.png" class="car">
+    <br>
+    <br>
+    <div style="align-items: center; display: table; overflow-x: hidden;overflow-y: scroll;">
+        <div style="overflow-x: hidden;position:absolute;left: 0;width: 100%;max-height: max-content;">
+            <span class="bikespan" id="bikespan">
+                <h1 style="color: red;">Bike</h1>
+                <hr>
+                <p style="text-align: center;">Starting from Rs 500/per day</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="">More details</a>
+                <br>
 
-        </span>
+            </span>
+            <span>
+                <img src="bike.jpg" class="bike" id="bike" onclick="bikemove()" >
+                </a>
+            </span>
+            <br>
+            <br>
+            <span>
+                <img src="car.png" class="car" id="car" onclick="carmove()">
+
+            </span>
+            <span class="carspan" id="carspan">
+                <h1 style="color: red;">Car</h1>
+                <hr>
+                <p style="text-align: center;">Starting from Rs 800/per day</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="">More details</a>
+                <br>
+            </span>
+        </div>
 
     </div>

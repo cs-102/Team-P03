@@ -3,29 +3,83 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(veh_bg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
 .bike{
-    width:40%
+    margin-left: 1.5%;
+    width: 35%;
+    z-index: 0;
 }
-.bike:hover{
-    opacity: 0.9;
-    animation: bikemove 3s;
+.bikemove{
+    width:35%;
+    animation: bikemoves 3s;
     position: relative;
+    animation-fill-mode: forwards;
+    z-index: 0;
 }
-@keyframes bikemove {
-    from {left: 0%;}
-    to {left: 53%;}
+@keyframes bikemoves {
+    from {left: 1.5%;}
+    to {left: 60%;}
+}
+.bikespan{
+    display:none;
+    overflow: hidden;
+}
+.bikespanmv{
+    overflow-x: hidden;
+    backdrop-filter:invert(10%);
+    text-align: center;
+    width:45%;
+    animation: bikespanmoves 3s;
+    position: absolute;
+    animation-fill-mode: forwards;
+    border-radius: 10%;
+    z-index: 1;
+}
+@keyframes bikespanmoves {
+    from {left: -48%;}
+    to {left: 5%;}
 }
 .car{
-    width:60%
+    width:44%;
+    margin-left:50%;
+    z-index:0;
 }
-.car:hover{
-    opacity: 0.9;
-    animation: carmove 3s;
+.carmove{
+    margin-left:55%;
+    width: 44%;
+    animation: carmoves 3s;
     position: relative;
+    animation-fill-mode: forwards;
+    z-index: 0;
 }
-@keyframes carmove {
+@keyframes carmoves {
     from {right: 0%;}
-    to {right: 47%;}
+    to {right: 50%;}
+}
+.carspan{
+    display:none;
+    overflow-x: hidden;
+}
+.carspanmv{
+    right: -45%;
+    backdrop-filter:sepia(90%);
+    text-align: center;
+    width:40%;
+    animation: carspanmoves 3s;
+    position: absolute;
+    animation-fill-mode: forwards;
+    border-radius: 10%;
+    z-index: 1;
+}
+@keyframes carspanmoves {
+    from {right: -45%;}
+    to {right: 5%;}
 }
 html{
     scroll-behavior: smooth;
@@ -35,12 +89,7 @@ html{
 :root{
     --navbar-height: 59px;
 }
-body{
-    background-image: url(veh_bg.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
 /* Navigation Bar */
 #navbar{
     display: flex;
