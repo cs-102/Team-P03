@@ -201,3 +201,12 @@ nav{background-color: #000}
     transform: scale(1) translateY(0);
     opacity: 1;
   }
+  .footer {
+    background-color: #2f2f2fda;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
