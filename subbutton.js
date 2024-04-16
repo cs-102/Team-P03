@@ -58,9 +58,7 @@ function hotelf(){
 }
 function locf(){
     window.location.href="https://www.google.com/maps/dir//Candolim+Beach,+Candolim+Beach+Road,+Candolim,+Goa/@15.5180538,73.7214124,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbfc13c227bd1bf:0xfa2f8c6c1efa4aef!2m2!1d73.7626122!2d15.5179749?entry=ttu"
-}document.querySelector(".contact").addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(".footer").scrollIntoView({
-        behavior: 'smooth'
-              });
-              });
+}
+document.querySelector(".contact").addEventListener("click", function (e) {e.preventDefault();
+document.querySelector(".footer").scrollIntoView({behavior: 'smooth'
+ });});
