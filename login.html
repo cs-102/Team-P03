@@ -1,83 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login form for rental service</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login form for rental service</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    
-    <div class="wrapper">
-        <form action="/login.html" method="post" id="loginform">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" id="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" id="Password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            <div class="remember-forgot">
-                <label ><input type="checkbox"> Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit" class="button" id="submit">Login</button>
 
-            <div class="register-link">
-                <p>Don't have an account?  <a href="/signup.html">Register</a></p>
-            </div>
-        </form>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
-    <script>
-      
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDgB8UNAWD4wBR9IlHA1I3K8S9CJBLI1lI",
-            authDomain: "goa-explorer-hub.firebaseapp.com",
-            projectId: "goa-explorer-hub",
-            storageBucket: "goa-explorer-hub.appspot.com",
-            messagingSenderId: "991456102564",
-            appId: "1:991456102564:web:90888b99f7932df835be31"
-        };
-        firebase.initializeApp(firebaseConfig);
+  <div class="wrapper">
+    <form action="/login.html" method="post" id="loginform">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" id="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" class="button" id="login">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="/signup.html">Register</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
 
-        const loginForm = document.getElementById("loginform");
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDgB8UNAWD4wBR9IlHA1I3K8S9CJBLI1lI",
+      authDomain: "goa-explorer-hub.firebaseapp.com",
+      projectId: "goa-explorer-hub",
+      storageBucket: "goa-explorer-hub.appspot.com",
+      messagingSenderId: "991456102564",
+      appId: "1:991456102564:web:90888b99f7932df835be31"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-        loginForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            const username = document.getElementById("usaername").value;
-            const password = document.getElementById("password").value;
+  <script>
+    const loginForm = document.getElementById("loginform");
+    e.preventDefault();
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById("Username").value;
+      const password = document.getElementById("Password").value;
 
-            firebase.auth().signInWithEmailAndPassword(username, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                alert("Login Successful!");
-                // Redirect or do other actions upon successful login
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert("Error occurred: " + errorMessage);
-            });
+      firebase.auth().signInWithEmailAndPassword(username, password)
+        .then((userCredential) => {
+          // Redirect to home page or fetch user data from Realtime Database
+          // Example: Redirect to home page
+          window.location.href = "/home.html";
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          alert("Error occurred: " + errorMessage);
         });
-    </script>
+    });
+  </script>
+  <script>
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, retrieve user data from the database
+        const userId = user.uid;
+        const userRef = firebase.database().ref('users/' + userId);
+
+        userRef.once('value')
+          .then((snapshot) => {
+            const userData = snapshot.val();
+            console.log(userData);
+            // Use user data as needed
+          })
+          .catch((error) => {
+            console.error("Error fetching user data:", error);
+          });
+      } else {
+        // User is signed out
+        // Redirect to login page or handle as needed
+      }
+    });
+  </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
