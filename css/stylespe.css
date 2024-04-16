@@ -7,7 +7,15 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
+.footer {
+    background-color: #2f2f2fda;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    width:100%;
+}
 .container {
     width: 80%;
     display: flex;
@@ -28,12 +36,12 @@ body {
 }
 .back {
     font-family: 'Courier New', Courier, monospace;
+    position: fixed;
     font-size: 28px;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
     text-decoration: none;
-    position: absolute;
     z-index: 1;
     background-color: black;
     left: 1;
