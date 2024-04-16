@@ -10,11 +10,26 @@ body{
     background-size: cover;
     background-position: center;
 }
+.footer {
+    background-color: #2f2f2fda;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: -200;
+    width:100%;
+}
 .div1{
     align-items: center; display: table; overflow-x: hidden;overflow-y: scroll;
 }
 .div2{
-    overflow-x: hidden;position:absolute;top:89px;left: 0;width: 100%;bottom: 0px; backdrop-filter: blur(8px) brightness(0.2);
+    overflow-x: hidden;
+    position:absolute;
+    top:89px;
+    left: 0;
+    width: 100%;
+    bottom: 0px;
+    backdrop-filter: blur(8px) brightness(0.2);
 }
 .vehh1{
     color: white;font-family: 'Courier New', Courier, monospace;
@@ -49,11 +64,9 @@ body{
     overflow-x: hidden;
     text-align: center;
     width:45%;
-
     animation: bikespanmoves 3s;
     position: absolute;
     animation-fill-mode: forwards;
-
     z-index: 1;
 }
 @keyframes bikespanmoves {
@@ -120,25 +133,38 @@ html{
 }
 
 /* Navigation Bar */
-#navbar{
-    display: flex;
-    align-items: center;
-    position: sticky;
+nav{background-color: #000000}
+  nav a{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #c9c3c3;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+    font-family: 'Baloo Bhai', cursive;
 
-    top: 0px;
-}
-
-#navbar::before{
-    content: "";
-    background-color: rgb(72, 70, 70);
+  }
+  nav a:hover{
+    color: #0ef;
+  }
+  nav a span{
     position: absolute;
-    top:0px;
-    left:0px;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width:100%;
     z-index: -1;
-    opacity: 0.7;
-}
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+  }
+  nav a:hover span{
+    transform: scale(1) translateY(0);
+    opacity:1;
+  }
 
 /* Navigation Bar: Logo and Image */
 #logo{
@@ -153,6 +179,13 @@ html{
 
 /* Navigation Bar: List Styling */
 
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0px;
+    z-index: 100;
+}
 #navbar ul{
     display: flex;
     font-family: 'Baloo Bhai', cursive;

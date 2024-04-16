@@ -3,11 +3,27 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../images/bikesbg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.footer {
+    background-color: #2f2f2fda;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    width:100%;
+}
 .bikecard{
     display:inline-grid;
-    height: 300px;
+    height: 400px;
     width: 300px;
-    background-image: linear-gradient(to right, rgba(218, 137, 61, 0.5), rgb(233, 223, 80));
+    background-image: linear-gradient(to right, rgba(3, 189, 180, 0.5), rgb(230, 217, 217));
     text-align: center;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -17,7 +33,7 @@
 .cardtext{
     z-index: 2;
     font-family: sans-serif;
-    color: rgb(0, 38, 255);
+    color: rgb(0, 0, 0);
     font-weight: 700;
     align-self: end;
     font-size: 25px;
@@ -28,6 +44,11 @@
     height: 300px;
     z-index: 1;
 
+}
+.bikecontainer{
+    top:100px; bottom:0px;  width:100%;display:flex ;gap:40px;
+    justify-content: center;
+    align-items:center;flex-wrap: wrap;
 }
 html{
     scroll-behavior: smooth;
