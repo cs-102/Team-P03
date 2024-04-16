@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppens', sans-serif;
+  }
+  body{
+    
+    justify-content: center;
+    align-items: center;
+   min-height: 10vh;
+    background: #000;
+  }
+  nav{background-color: #000}
+  nav a{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #c9c3c3;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+    font-family: 'Baloo Bhai', cursive;
+
+  }
+  nav a:hover{
+    color: #0ef;
+  }
+  nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+  }
+  nav a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+ 
+  #logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+
+
+
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 50px;
+}
+
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('road-6881040_1280.jpg') no-repeat center center/cover;
+    height: 339px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+
+
+.wrapper img{width: 100%;height: 100px;margin: auto;}
+        *{box-sizing: border-box;}
+.wrapper{
+            width:100% ;
+            height: 125vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(1, 1, 1);
+            color: aliceblue;
+            font-family: "Montserrat", sans-serif;text-align: center;color: aliceblue;
+        }       
+.wrapper button {
+    border: none; 
+    background: none; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.wrapper button img{
+    width: 25%;
+    height: auto;
+}
+
+.ext{display: flex;}        
+.uo{text-align: center;background-color: black;color: aliceblue;}
+        
+hr{color: aliceblue;}
+
+.image{align-items: center;justify-content: center;text-align: center;
+
+        }
+.image img{border-radius: 20px;
+              margin:26px ;
+               padding: 3px;
+               width:273px;
+            
+            height: 400px;
+            
+        }
+ h1{
+    font-family: "Montserrat", sans-serif;text-align: center;color: aliceblue;
+}
+
+
+
+
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+
+ .image:hover {
+    transform: scale(1.2, 1.2);
+  }
+  .wrapper:hover .image{opacity: 0.5;filter: blur(3px);}
+.wrapper .image:hover{
+    opacity: 1;filter: blur(0px);
+}
