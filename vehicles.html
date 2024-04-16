@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+                document.GetElementByID('bikespan').style.height=document.getElementById('bike').style.getPropertyValue("height");
+
+        function carmove(){
+            document.getElementById("car").classList.replace("car","carmove");
+            document.getElementById("carspan").classList.replace("carspan","carspanmv");
+        }
+        function bikemove(){
+            document.getElementById("bike").classList.replace("bike","bikemove");
+            document.getElementById("bikespan").classList.replace("bikespan","bikespanmv");
+        }
+    </script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/vehicles.css">
+    <title>Chose vehicle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="image1.png" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#Beaches">Beaches</a></li>
+            <li class="item"><a href="#Rentals">Rentals</a></li>
+            <li class="item"><a href="#Churches">Churches</a></li>
+        </ul>
+    </nav>
+    <div class="div1">
+        <div class="div2">
+            <span class="bikespan" id="bikespan">
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <h1 class="vehh1">BIKE</h1>
+                <p class="vehtext">Starting from Rs 500/per day</p>
+                <br><br>
+                <span style="background-color:black; color:rgb(255, 255, 255);font-family: 'Courier New', Courier, monospace;font-size: 1.1em;border: white solid 1px;"> &NonBreakingSpace; BOOK NOW &nbsp;</span>
+                <p>&nbsp;</p>
+            </span><br><br>
+            <span>
+                <img src="images/bike.png" class="bike" id="bike" onclick="bikemove()" >
+                </a>
+            </span>
+            <br>
+            <br>
+            <span>
+                <img src="images/car.png" class="car" id="car" onclick="carmove()">
+
+            </span>
+            <span class="carspan" id="carspan">
+                <h1 class="vehh1">CAR</h1>
+                <p class="vehtext">Starting from Rs 800/per day</p>
+                <br>
+                <br>
+                <span style="background-color:black; color:rgb(255, 255, 255);font-family: 'Courier New', Courier, monospace;font-size: 1.1em;border: white solid 1px;"> &NonBreakingSpace; BOOK NOW &nbsp;</span>
+                <p>&nbsp;</p>
+            </span>
+        </div>
+
+    </div>
