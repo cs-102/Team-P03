@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form for rental service</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="/signup.html" method="post">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password"  id="Password">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email"  id="mail">
+            </div>
+            <div class="remember-forgot">
+                <label ><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="button" id="submit">Signup</button>  
+        </form>
+    
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"; // Corrected import statement
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyDgB8UNAWD4wBR9IlHA1I3K8S9CJBLI1lI",
+                authDomain: "goa-explorer-hub.firebaseapp.com",
+                projectId: "goa-explorer-hub",
+                storageBucket: "goa-explorer-hub.appspot.com",
+                messagingSenderId: "991456102564",
+                appId: "1:991456102564:web:90888b99f7932df835be31"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase(app);
+
+            document.getElementById("submit").addEventListener('click', function(e){
+                e.preventDefault();
+                set(ref(db, 'user/' + document.getElementById("Username").value),
+                {    
+                    Username: document.getElementById("Username").value,
+                    Password: document.getElementById("Password").value,
+                    Email: document.getElementById("mail").value
+                }).then(() => {
+                    alert("Signup Successful!");
+                }).catch((error) => {
+                    alert("Error occurred: " + error.message);
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
