@@ -158,3 +158,12 @@ hr{color: aliceblue;}
 .wrapper .image:hover{
     opacity: 1;filter: blur(0px);
 }
+.footer {
+  background-color: #2f2f2fda;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
