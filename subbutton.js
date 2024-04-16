@@ -62,5 +62,5 @@ function locf(){
     e.preventDefault();
     document.querySelector(".footer").scrollIntoView({
         behavior: 'smooth'
-    });
-});
+              });
+              });
