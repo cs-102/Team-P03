@@ -14,7 +14,7 @@
 #home::before{ 
     content: "";
     position: absolute;
-    background: url('images/dark_image.jpg') no-repeat center center/cover;
+    background: url('../images/dark_image.jpg') no-repeat center center/cover;
     height: 339px;
     top:0px;
     left:0px;
@@ -90,7 +90,7 @@
 }
 
 body{min-height: 10vh;
-    background-image: url("images/bbbb.jpg");
+    background-image: url("../images/bbbb.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
